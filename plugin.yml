@@ -1,0 +1,24 @@
+name: QuickWarpSigns
+main: com.tehelee.quickWarpSigns.Main
+version: 1.10.2.1
+
+commands:
+  quickwarp:
+    description: Quick Warp command
+    usage: /quickwarp
+    permission: permissions.quickWarp.create
+    aliases: [qwarp, qw]
+
+permissions:
+  permissions.quickWarp.*:
+    description: Gives access to all of QuickWarpSigns
+    default: op
+    children:
+      permissions.quickWarp.create: true
+      permissions.quickWarp.reload: true
+  permissions.quickWarp.create:
+    description: Allows the player to create Quick Warp signs.
+    default: op
+  permissions.quickWarp.reload:
+    descirption: Allows the player to reload the plugin.
+    default: true
